@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { Rocket, Target, Users, Zap, CheckCircle } from "lucide-react";
-
 const skills = [
   { label: "Next.js / React", level: 95, color: "#fbbf24" },
   { label: "WordPress & Headless CMS", level: 92, color: "#60a5fa" },
@@ -10,14 +9,12 @@ const skills = [
   { label: "Technical SEO", level: 88, color: "#fb923c" },
   { label: "MongoDB / PostgreSQL", level: 82, color: "#f472b6" },
 ];
-
 const process = [
   { step: "01", title: "Discovery", desc: "We analyze your goals, competitors, and tech requirements." },
   { step: "02", title: "Architecture", desc: "We design the perfect stack — headless, serverless, or hybrid." },
   { step: "03", title: "Build", desc: "Pixel-perfect frontend meets a rock-solid backend, built in fast sprints." },
   { step: "04", title: "Launch & Optimize", desc: "Deploy, monitor, and continuously push performance forward." },
 ];
-
 function SkillBar({ label, level, color, delay }) {
   const barRef = useRef(null);
   const [width, setWidth] = useState(0);
